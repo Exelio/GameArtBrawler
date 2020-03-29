@@ -1,10 +1,9 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 [CreateAssetMenu(fileName = "CharacterData", menuName = "ScriptableObjects/CharacterStats", order = 1)]
 public class CharacterStats : ScriptableObject
 {
-    [Range(150, 400)] [SerializeField] private float _health;
+    [Range(200, 400)] [SerializeField] private float _health;
     public float Health => _health;
     [Range(15, 50)] [SerializeField] private float _normalAttackDamage;
     public float NormalAttackDamage => _normalAttackDamage; 
@@ -30,14 +29,16 @@ public class CharacterStats : ScriptableObject
 
     public float TakeDamage(float dmgTaken)
     {
+        Debug.Log(_defence);
         int resultDamage = 0;
         int minDmg = (int) (dmgTaken * (100 / (100 + dmgTaken)));
         int maxDmg = (int) (dmgTaken / (100 / (100 + dmgTaken)));
+
         dmgTaken = _random.Next(minDmg, maxDmg);
 
-        if (dmgTaken < 25) resultDamage = (int)(dmgTaken * (100f / (100f + _defence)));
-        else if (dmgTaken < 40) resultDamage = (int)(dmgTaken * (100f / (100f + (_defence / 2))));
-        else resultDamage = (int)(dmgTaken * (100f / (100f + (_defence / 3))));
+        if (dmgTaken < 25) resultDamage = (int)(dmgTaken * (100f / (100f + ((_defence * 2) / 3))));
+        else if (dmgTaken < 40) resultDamage = (int)(dmgTaken * (100f / (100f + ((_defence * 2) / 2))));
+        else resultDamage = (int)(dmgTaken * (100f / (100f + (_defence * 2))));
 
         _actualDamageTaken = resultDamage;
         return resultDamage;

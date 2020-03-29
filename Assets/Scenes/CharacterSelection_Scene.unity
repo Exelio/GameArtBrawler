@@ -806,6 +806,18 @@ PrefabInstance:
       propertyPath: _player2RefSpawnpoint
       value: 
       objectReference: {fileID: 1369516933}
+    - target: {fileID: 8478884754563879984, guid: da0d4aab4e551d94e9339f2a8bc20401,
+        type: 3}
+      propertyPath: _characterObjects.Array.data[0]
+      value: 
+      objectReference: {fileID: 2546252851075571783, guid: 7f2a17193d56e0b46903b99024bccadc,
+        type: 3}
+    - target: {fileID: 8478884754563879984, guid: da0d4aab4e551d94e9339f2a8bc20401,
+        type: 3}
+      propertyPath: _characterObjects.Array.data[1]
+      value: 
+      objectReference: {fileID: 2546252851075571783, guid: b756ddab8ea62e049b78b0cae92eb07e,
+        type: 3}
     - target: {fileID: 8478884754606119421, guid: da0d4aab4e551d94e9339f2a8bc20401,
         type: 3}
       propertyPath: _sceneNameToLoad
