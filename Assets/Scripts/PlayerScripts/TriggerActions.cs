@@ -41,16 +41,16 @@ public class TriggerActions : MonoBehaviour
             trigger.SetActive(true);
     }
 
-    public void TriggerParticleEffect()
+    public void TriggerParticleEffect(int index)
     {
         if (_attackParticleEffect != null)
         {
-            GameObject obj = Instantiate(_attackParticleEffect.gameObject, _instantiationPointAttackParticleEffect);
+            GameObject obj = Instantiate(_attackParticleEffect[index].gameObject, _instantiationPointAttackParticleEffect[index]);
 
-            obj.transform.position = _instantiationPointAttackParticleEffect.transform.position;
+            obj.transform.position = _instantiationPointAttackParticleEffect[index].transform.position;
             obj.transform.parent = null;
 
-            Destroy(obj, _attackParticleEffect.main.duration);
+            Destroy(obj, _attackParticleEffect[index].main.duration);
         }
     }
 
