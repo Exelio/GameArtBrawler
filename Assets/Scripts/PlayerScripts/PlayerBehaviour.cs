@@ -150,7 +150,7 @@ public class PlayerBehaviour : MonoBehaviour
             Destroy(obj, _hitParticleEffect.main.duration);
         }
 
-        CameraShaker.Instance.ShakeOnce(_characterStats.ActualDamageTaken / 5, (_characterStats.ActualDamageTaken / 5) * 2, 0.15f, 0.5f);
+        //CameraShaker.Instance.ShakeOnce(_characterStats.ActualDamageTaken / 5, (_characterStats.ActualDamageTaken / 5) * 2, 0.15f, 0.5f);
     }
 
     private void InstantiateDamage()
