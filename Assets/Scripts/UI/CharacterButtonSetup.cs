@@ -66,11 +66,14 @@ public class CharacterButtonSetup : MonoBehaviour
 
     private void CheckValues(CharacterStats playerStats)
     {
-        if (playerStats.Health > maxHealthValue) maxHealthValue = playerStats.Health;
-        if (playerStats.Defence > maxDefenceValue) maxDefenceValue = playerStats.Defence;
-        if (playerStats.NormalAttackDamage > maxNormalAttValue) maxNormalAttValue = playerStats.NormalAttackDamage;
-        if (playerStats.HeavyAttackDamage > maxHeavyAttValue) maxHeavyAttValue = playerStats.HeavyAttackDamage;
-        if (playerStats.CharacterSpeed > maxSpeedValue) maxSpeedValue = playerStats.CharacterSpeed;
+        if (playerStats != null)
+        {
+            if (playerStats.Health > maxHealthValue) maxHealthValue = playerStats.Health;
+            if (playerStats.Defence > maxDefenceValue) maxDefenceValue = playerStats.Defence;
+            if (playerStats.NormalAttackDamage > maxNormalAttValue) maxNormalAttValue = playerStats.NormalAttackDamage;
+            if (playerStats.HeavyAttackDamage > maxHeavyAttValue) maxHeavyAttValue = playerStats.HeavyAttackDamage;
+            if (playerStats.CharacterSpeed > maxSpeedValue) maxSpeedValue = playerStats.CharacterSpeed;
+        }
     }
 
     public void ChangePlayerCharacter(int i, GameObject go)

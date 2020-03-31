@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -783,6 +783,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8478884754563879984, guid: da0d4aab4e551d94e9339f2a8bc20401,
         type: 3}
+      propertyPath: _characterObjects.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8478884754563879984, guid: da0d4aab4e551d94e9339f2a8bc20401,
+        type: 3}
       propertyPath: _gameController
       value: 
       objectReference: {fileID: 1855804161}
@@ -823,6 +828,18 @@ PrefabInstance:
       propertyPath: _characterObjects.Array.data[2]
       value: 
       objectReference: {fileID: 1552031142717544610, guid: d3aa8b736ab3a4140a1a5af60fa96249,
+        type: 3}
+    - target: {fileID: 8478884754563879984, guid: da0d4aab4e551d94e9339f2a8bc20401,
+        type: 3}
+      propertyPath: _characterObjects.Array.data[3]
+      value: 
+      objectReference: {fileID: 5240232032504446875, guid: 336bec2dc9155a44cb94e72ee4738b35,
+        type: 3}
+    - target: {fileID: 8478884754563879984, guid: da0d4aab4e551d94e9339f2a8bc20401,
+        type: 3}
+      propertyPath: _characterObjects.Array.data[4]
+      value: 
+      objectReference: {fileID: 6794393237042327270, guid: 758fb167e1eec794da6ed8d87a529b9b,
         type: 3}
     - target: {fileID: 8478884754606119421, guid: da0d4aab4e551d94e9339f2a8bc20401,
         type: 3}

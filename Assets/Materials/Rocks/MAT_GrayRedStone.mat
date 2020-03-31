@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MAT_GrayBlack
+  m_Name: MAT_GrayRedStone
   m_Shader: {fileID: -6465566751694194690, guid: 3ecfaa4af48f81c4088206985a6f8722,
     type: 3}
   m_ShaderKeywords: 
