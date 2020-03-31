@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using EZCameraShake;
 using UnityEngine;
 
 [RequireComponent(typeof(CharacterController))]
@@ -18,6 +19,9 @@ public class PlayerBehaviour : MonoBehaviour
     [SerializeField] private GameObject _floatingPoints;
     [SerializeField] private Transform _instantiationPointFloatingPoints;
 
+    [SerializeField] private Transform _instantiationPointHitParticleEffect;
+    [SerializeField] private ParticleSystem _hitParticleEffect;
+
     private int _playerNumber = 1;
     public int PlayerNumber { get => _playerNumber; set { _playerNumber = value; } }    
     private float _currentHP = 0;
@@ -32,7 +36,6 @@ public class PlayerBehaviour : MonoBehaviour
     public event EventHandler OnChangeCurrentHealth;
 
     private CharacterController _characterController;
-    private GameController _gameController;
     private Vector3 _direction;
 
     private string _horizontalAxis, _normalAttackButton, _heavyAttackButton, _blockButton;
@@ -45,7 +48,6 @@ public class PlayerBehaviour : MonoBehaviour
 
     private Vector3 impact;
 
-    // Start is called before the first frame update
     public void Initialize()
     {
         transform.parent = null;
@@ -64,7 +66,6 @@ public class PlayerBehaviour : MonoBehaviour
         }
 
         _characterController = GetComponent<CharacterController>();
-        _gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
 
         _screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
         _objectWidth = GetComponent<Collider>().bounds.size.x;
@@ -74,7 +75,7 @@ public class PlayerBehaviour : MonoBehaviour
 
     void Update()
     {
-        if (_hasInitialized && _gameController.IsGamePlaying)
+        if (_hasInitialized && GameController.IsGamePlaying)
         {
             if (Input.GetButtonDown(_normalAttackButton) && !_isAttacking)
             {
@@ -82,34 +83,35 @@ public class PlayerBehaviour : MonoBehaviour
                 _doDamageValue = _characterStats.NormalAttackDamage;
                 _isAttacking = true;
             }
+            
             if (Input.GetButtonDown(_heavyAttackButton) && !_isAttacking)
             {
                 _animController.SetTrigger("HeavyAttack");
                 _doDamageValue = _characterStats.HeavyAttackDamage;
                 _isAttacking = true;
             }
+            
             if(Input.GetButtonDown(_blockButton) && !_isAttacking && _canBlock)
             {
                 _animController.SetTrigger("IsBlocking");
                 StartCoroutine(TimeTillBlock());
             }
+
             _direction = new Vector3(Input.GetAxis(_horizontalAxis), 0, 0);
 
             foreach (var hit in _hitDetection)
-            {
                 hit.OnHit += DoDamage;
-            }
 
             if (impact.magnitude > 0.2) _characterController.Move(impact * Time.deltaTime);
             impact = Vector3.Lerp(impact, Vector3.zero, 2 * Time.deltaTime);
-
         }
     }
 
     private void TriggerFightEnd()
     {
         _animController.SetTrigger("HasFainted");
-        _gameController.IsGamePlaying = false;
+        GameController.ChangeGameState(false);
+        StartCoroutine(GameController.GoToCharacterSelectScreen());
     }
 
     private IEnumerator TimeTillBlock()
@@ -135,8 +137,20 @@ public class PlayerBehaviour : MonoBehaviour
             if (_currentHP < 0) _currentHP = 0;
             OnChangeCurrentHealth?.Invoke(this, EventArgs.Empty);
 
-            impact += direction * force / _characterStats.Defence;
+            impact += direction * force / _characterStats.Weight;
         }
+
+        if (_hitParticleEffect != null)
+        {
+            GameObject obj = Instantiate(_hitParticleEffect.gameObject, _instantiationPointHitParticleEffect);
+
+            obj.transform.position = _instantiationPointHitParticleEffect.transform.position;
+            obj.transform.parent = null;
+
+            Destroy(obj, _hitParticleEffect.main.duration);
+        }
+
+        CameraShaker.Instance.ShakeOnce(_characterStats.ActualDamageTaken / 5, (_characterStats.ActualDamageTaken / 5) * 2, 0.15f, 0.5f);
     }
 
     private void InstantiateDamage()
@@ -153,26 +167,25 @@ public class PlayerBehaviour : MonoBehaviour
     {
         if (!_isDamageDone)
         {
-            go?.GetComponent<PlayerBehaviour>()?.TakeDamage(_doDamageValue, 40, direction);
+            go?.GetComponent<PlayerBehaviour>()?.TakeDamage(_doDamageValue, _characterStats.ActualDamageTaken, direction);
             _isDamageDone = true;
         }
     }
 
     private void FixedUpdate()
     {
-        if (_hasInitialized && _gameController.IsGamePlaying)
-        {
-            if (!_isAttacking)
-            {
+        if (_hasInitialized && GameController.IsGamePlaying)
+            if (!_isAttacking && !_isBlocking)
                 WalkAndIdle();
-            }
-        }
-        if(_hasInitialized && !_gameController.IsGamePlaying) _animController.SetFloat("WalkSpeed", 0);
+
+        if(_hasInitialized && !GameController.IsGamePlaying)
+            _animController.SetFloat("WalkSpeed", 0);
     }
 
     private void WalkAndIdle()
     {
         Vector3 speed = _direction * _characterStats.CharacterSpeed * Time.deltaTime;
+
         if (!_characterController.isGrounded)
             speed -= transform.up * 9.81f * Time.deltaTime;
                 
@@ -189,6 +202,7 @@ public class PlayerBehaviour : MonoBehaviour
     private void Clamp()
     {
         Vector3 viewPos = transform.position;
+
         viewPos = new Vector3
         (
             FloatClamp(viewPos.x, _screenBounds.x + _objectWidth, -(_screenBounds.x + _objectWidth)),

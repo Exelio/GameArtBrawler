@@ -131,7 +131,7 @@ public class PlayerBehaviourTesting : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (!_isAttacking)
+        if (!_isAttacking && !_isBlocking)
             WalkAndIdle();
     }
 

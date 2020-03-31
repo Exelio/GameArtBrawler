@@ -15,7 +15,10 @@ public class CharacterStats : ScriptableObject
     public float TimeUntilNextBlock => _timeUntilNextBlock;
 
     [Range(1, 50)] [SerializeField] private int _defence = 1;
-    public int Defence => _defence; 
+    public int Defence => _defence;
+
+    [Range(1, 10)] [SerializeField] private int _weight = 1;
+    public int Weight => _weight;
 
     private float _actualDamageTaken;
     public float ActualDamageTaken => _actualDamageTaken;
@@ -29,7 +32,6 @@ public class CharacterStats : ScriptableObject
 
     public float TakeDamage(float dmgTaken)
     {
-        Debug.Log(_defence);
         int resultDamage = 0;
         int minDmg = (int) (dmgTaken * (100 / (100 + dmgTaken)));
         int maxDmg = (int) (dmgTaken / (100 / (100 + dmgTaken)));
