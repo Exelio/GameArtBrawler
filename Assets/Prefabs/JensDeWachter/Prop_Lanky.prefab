@@ -493,7 +493,7 @@ GameObject:
   - component: {fileID: 6358696936760423319}
   m_Layer: 0
   m_Name: Prop_Lanky
-  m_TagString: hitbox
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -505,7 +505,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4569701012236561118}
-  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -572,13 +572,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _characterStats: {fileID: 11400000, guid: d43422841df578e4b8613df4cc247c40, type: 2}
   _animController: {fileID: 5497553525904353544}
-  _attackTriggers: []
-  _hitDetection: []
-  _floatingPoints: {fileID: 6320705190441572265, guid: 96b69d38a404d394ebc8a006620ff77f,
+  _attackTriggers:
+  - {fileID: 5497553525547171278}
+  - {fileID: 5497553524893998265}
+  _hitDetection:
+  - {fileID: 5497553525547171272}
+  - {fileID: 5497553524893998267}
+  _floatingPoints: {fileID: 7632250155645166426, guid: 8295131836fdb8d4ebdf27bc4dbf6200,
     type: 3}
   _instantiationPointFloatingPoints: {fileID: 1934776021970793474}
   _instantiationPointHitParticleEffect: {fileID: 1614881481419025047}
-  _hitParticleEffect: {fileID: 0}
+  _hitParticleEffect: {fileID: 198406564588387756, guid: 89f21bbcc5cb3ea418e1be51775f9548,
+    type: 3}
 --- !u!114 &6358696936760423319
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -592,8 +597,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerBeh: {fileID: 8702022702020875468}
-  _instantiationPointAttackParticleEffect: {fileID: 0}
-  _attackParticleEffect: {fileID: 0}
+  _instantiationPointAttackParticleEffect:
+  - {fileID: 8222491848040098659}
+  - {fileID: 7267964622320189026}
+  _attackParticleEffect:
+  - {fileID: 198644868753204056, guid: 6643b0f337df9be4da7cac8152b58de8, type: 3}
+  - {fileID: 198178008105517744, guid: 306e7743e5cc81f4b9e82b22a0e8bf62, type: 3}
 --- !u!1 &5271292571763436312
 GameObject:
   m_ObjectHideFlags: 0
@@ -608,7 +617,7 @@ GameObject:
   - component: {fileID: 5497553524101259614}
   m_Layer: 0
   m_Name: CrabHub003
-  m_TagString: Untagged
+  m_TagString: hitbox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

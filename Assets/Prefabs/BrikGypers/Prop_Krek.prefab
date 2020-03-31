@@ -870,7 +870,7 @@ MonoBehaviour:
   - {fileID: 9009128454591528643}
   _hitDetection:
   - {fileID: 6826807228244744145}
-  _floatingPoints: {fileID: 6320705190441572265, guid: 96b69d38a404d394ebc8a006620ff77f,
+  _floatingPoints: {fileID: 7632250155645166426, guid: 8295131836fdb8d4ebdf27bc4dbf6200,
     type: 3}
   _instantiationPointFloatingPoints: {fileID: 699904708196521196}
   _instantiationPointHitParticleEffect: {fileID: 4009619378182953542}
