@@ -4,8 +4,8 @@ public class TriggerActions : MonoBehaviour
 {
     [SerializeField] private PlayerBehaviour _playerBeh;
 
-    [SerializeField] private Transform _instantiationPointAttackParticleEffect;
-    [SerializeField] private ParticleSystem _attackParticleEffect;
+    [SerializeField] private Transform[] _instantiationPointAttackParticleEffect;
+    [SerializeField] private ParticleSystem[] _attackParticleEffect;
 
     public void ResetAnimTrigger()
     {
