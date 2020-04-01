@@ -9,7 +9,7 @@ public class CharacterStats : ScriptableObject
     public float NormalAttackDamage => _normalAttackDamage; 
     [Range(30, 100)] [SerializeField] private float _heavyAttackDamage;
     public float HeavyAttackDamage => _heavyAttackDamage;
-    [Range(0.5f, 2.5f)] [SerializeField] private float _characterSpeed = 2f;
+    [Range(1f, 5f)] [SerializeField] private float _characterSpeed = 2f;
     public float CharacterSpeed => _characterSpeed;
     [Range(1f, 7.5f)] [SerializeField] private float _timeUntilNextBlock = 2f;
     public float TimeUntilNextBlock => _timeUntilNextBlock;

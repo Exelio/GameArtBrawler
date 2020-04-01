@@ -102,7 +102,7 @@ public class PlayerBehaviour : MonoBehaviour
             foreach (var hit in _hitDetection)
                 hit.OnHit += DoDamage;
 
-            if (impact.magnitude > 0.2) _characterController.Move(impact * Time.deltaTime);
+            if (impact.magnitude > 0.2) _characterController.Move(new Vector3(impact.x * Time.deltaTime, 0f, 0f));
             impact = Vector3.Lerp(impact, Vector3.zero, 2 * Time.deltaTime);
         }
     }
@@ -150,7 +150,7 @@ public class PlayerBehaviour : MonoBehaviour
             Destroy(obj, _hitParticleEffect.main.duration);
         }
 
-        CameraShaker.Instance.ShakeOnce(_characterStats.ActualDamageTaken / 5, (_characterStats.ActualDamageTaken / 5) * 2, 0.15f, 0.5f);
+        CameraShaker.Instance.ShakeOnce(_characterStats.ActualDamageTaken / 7, (_characterStats.ActualDamageTaken / 7) * 2, 0.15f, 0.5f);
     }
 
     private void InstantiateDamage()
@@ -205,7 +205,7 @@ public class PlayerBehaviour : MonoBehaviour
 
         viewPos = new Vector3
         (
-            FloatClamp(viewPos.x, _screenBounds.x + _objectWidth, -(_screenBounds.x + _objectWidth)),
+            FloatClamp(viewPos.x, _screenBounds.x + _objectWidth + 6, -(_screenBounds.x + _objectWidth + 6)),
             viewPos.y,
             viewPos.z
         );

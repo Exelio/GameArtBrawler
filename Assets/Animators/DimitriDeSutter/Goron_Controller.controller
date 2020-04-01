@@ -8,7 +8,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: HeavyAttack
-  m_Speed: 1
+  m_Speed: 1.2
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 3777354966052376976}
@@ -347,7 +347,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: FastAttack
-  m_Speed: 1
+  m_Speed: 2
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -227963097199024804}
@@ -374,7 +374,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Block
-  m_Speed: 1
+  m_Speed: 1.2
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 3772398790913003595}
@@ -619,7 +619,7 @@ BlendTree:
     m_Motion: {fileID: 7400000, guid: 59b10b290af5f834f902727b32fc2e71, type: 2}
     m_Threshold: -0.5
     m_Position: {x: -0.5, y: -0.5}
-    m_TimeScale: 0.9
+    m_TimeScale: 1.5
     m_CycleOffset: 0
     m_DirectBlendParameter: WalkSpeed
     m_Mirror: 0
@@ -627,7 +627,7 @@ BlendTree:
     m_Motion: {fileID: 7400000, guid: b470d4accb95c784db5c581dbb773b27, type: 2}
     m_Threshold: 0
     m_Position: {x: 0, y: 0}
-    m_TimeScale: 0.9
+    m_TimeScale: 1
     m_CycleOffset: 0
     m_DirectBlendParameter: WalkSpeed
     m_Mirror: 0
@@ -635,7 +635,7 @@ BlendTree:
     m_Motion: {fileID: 7400000, guid: 215b42170b2fcd74796667caa7d3fbe5, type: 2}
     m_Threshold: 0.5
     m_Position: {x: 0.5, y: 0.5}
-    m_TimeScale: 0.72
+    m_TimeScale: 1
     m_CycleOffset: 0
     m_DirectBlendParameter: WalkSpeed
     m_Mirror: 0

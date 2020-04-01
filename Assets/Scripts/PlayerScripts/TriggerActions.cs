@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using EZCameraShake;
+using UnityEngine;
 
 public class TriggerActions : MonoBehaviour
 {
@@ -52,6 +53,11 @@ public class TriggerActions : MonoBehaviour
 
             Destroy(obj, _attackParticleEffect[index].main.duration);
         }
+    }
+
+    public void TriggerScreenShake(float magnitude)
+    {
+        CameraShaker.Instance.ShakeOnce(magnitude * 2, magnitude * 4, 0.15f, 0.5f);
     }
 
     public void TriggerAudio()

@@ -8,14 +8,14 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: MAT_YellowCrystal
-  m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: eddc3a66a1db4ff40b497d212f1a8179,
+    type: 3}
   m_ShaderKeywords: _EMISSION _NORMALMAP
   m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 3050
-  stringTagMap:
-    RenderType: Transparent
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
   disabledShaderPasses:
   - SHADOWCASTER
   m_SavedProperties:
@@ -61,6 +61,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _TextureMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Floats:
     - Vector1_27FC01CA: 0.804
     - Vector1_3CFD09B5: 0
@@ -75,6 +79,7 @@ Material:
     - _CausticSpeed: 3.6
     - _CausticVertexDistortion: 1.166
     - _Cull: 2
+    - _Curvature: 0
     - _Cutoff: 0.361
     - _DirectionX: -0.008
     - _DirectionY: 0
@@ -120,7 +125,8 @@ Material:
     - _BaseColor: {r: 0.8301887, g: 0.7218405, b: 0.09789959, a: 1}
     - _Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _EdgeColor: {r: 0, g: 0.9622642, b: 0.6201428, a: 1}
-    - _EmissionColor: {r: 0.96115834, g: 0.972549, b: 0, a: 1}
+    - _EmissionColor: {r: 0.49056602, g: 0.33097556, b: 0, a: 1}
+    - _MainColor: {r: 0.9339623, g: 0.8132089, b: 0.030838395, a: 1}
     - _RimColor: {r: 1, g: 1, b: 1, a: 1}
     - _ShadowColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}

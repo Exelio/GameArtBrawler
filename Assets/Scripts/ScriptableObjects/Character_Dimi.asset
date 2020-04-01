@@ -15,6 +15,7 @@ MonoBehaviour:
   _health: 390
   _normalAttackDamage: 35
   _heavyAttackDamage: 75
-  _characterSpeed: 2.1
+  _characterSpeed: 4.2
   _timeUntilNextBlock: 2.1
   _defence: 30
+  _weight: 8

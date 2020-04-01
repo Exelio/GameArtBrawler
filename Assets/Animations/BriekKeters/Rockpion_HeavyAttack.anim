@@ -60741,6 +60741,13 @@ AnimationClip:
     floatParameter: 0
     intParameter: 1
     messageOptions: 0
+  - time: 1.4666667
+    functionName: TriggerScreenShake
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 3
+    intParameter: 0
+    messageOptions: 0
   - time: 2.1666667
     functionName: ResetTriggers
     data: 
