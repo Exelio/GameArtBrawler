@@ -431,7 +431,7 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0.28333333
-    functionName: EnterNewScene
+    functionName: StartGame
     data: 
     objectReferenceParameter: {fileID: 11500000, guid: 5352e299603e70b4786e85cd7942891b,
       type: 3}

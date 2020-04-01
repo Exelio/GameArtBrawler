@@ -12,6 +12,13 @@ public class NewScreen : MonoBehaviour
     //need the scene number of the game
     void StartGame()
     {
-        SceneManager.LoadScene(_sceneIndex);
+        if (this.gameObject.CompareTag("Quit"))
+        {
+            Application.Quit();
+        }
+        else
+        {
+            SceneManager.LoadScene(_sceneIndex);
+        }
     }
 }
