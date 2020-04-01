@@ -54,7 +54,7 @@ public class CursorMovement : MonoBehaviour
 
     private void LateUpdate()
     {
-        Clamp();
+        //Clamp();
     }
 
     private void Clamp()
