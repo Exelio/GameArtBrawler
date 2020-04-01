@@ -12,8 +12,8 @@ public class PlayerBehaviour : MonoBehaviour
     [SerializeField] private Animator _animController;
     public Animator AnimController { get => _animController; set { _animController = value; } }
 
-    [SerializeField] private GameObject[] _attackTriggers;
-    public GameObject[] AttackTriggers { get => _attackTriggers; set { _attackTriggers = value; } }
+    [SerializeField] private Collider[] _attackTriggers;
+    public Collider[] AttackTriggers { get => _attackTriggers; set { _attackTriggers = value; } }
 
     [SerializeField] private PunchHitDetection[] _hitDetection;
     [SerializeField] private GameObject _floatingPoints;
@@ -21,6 +21,9 @@ public class PlayerBehaviour : MonoBehaviour
 
     [SerializeField] private Transform _instantiationPointHitParticleEffect;
     [SerializeField] private ParticleSystem _hitParticleEffect;
+
+    [SerializeField] private AudioSource _audioSource;
+    [SerializeField] private AudioClip _hitSoundEffect;
 
     private int _playerNumber = 1;
     public int PlayerNumber { get => _playerNumber; set { _playerNumber = value; } }    
@@ -62,7 +65,7 @@ public class PlayerBehaviour : MonoBehaviour
 
         foreach (var trigger in _attackTriggers)
         {
-            trigger.SetActive(false);
+            trigger.enabled = false;
         }
 
         _characterController = GetComponent<CharacterController>();
@@ -71,6 +74,22 @@ public class PlayerBehaviour : MonoBehaviour
         _objectWidth = GetComponent<Collider>().bounds.size.x;
 
         _hasInitialized = true;
+    }
+
+    public void DisableTriggers()
+    {
+        foreach (var trigger in _attackTriggers)
+        {
+            trigger.enabled = false;
+        }
+    }
+
+    public void EnableTriggers()
+    {
+        foreach (var trigger in _attackTriggers)
+        {
+            trigger.enabled = true;
+        }
     }
 
     void Update()

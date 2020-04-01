@@ -8,6 +8,10 @@ public class TriggerActions : MonoBehaviour
     [SerializeField] private Transform[] _instantiationPointAttackParticleEffect;
     [SerializeField] private ParticleSystem[] _attackParticleEffect;
 
+    [SerializeField] private AudioSource _audioSource;
+
+    [SerializeField] private AudioClip[] _attackSoundEffects;
+
     public void ResetAnimTrigger()
     {
         _playerBeh.AnimController.ResetTrigger("FastAttack");
@@ -32,14 +36,12 @@ public class TriggerActions : MonoBehaviour
 
     public void ResetTriggers()
     {
-        foreach (var trigger in _playerBeh.AttackTriggers)
-            trigger.SetActive(false);
+        _playerBeh.DisableTriggers();
     }
 
     public void SetTriggers()
     {
-        foreach (var trigger in _playerBeh.AttackTriggers)
-            trigger.SetActive(true);
+        _playerBeh.EnableTriggers();
     }
 
     public void TriggerParticleEffect(int index)
@@ -60,8 +62,8 @@ public class TriggerActions : MonoBehaviour
         CameraShaker.Instance.ShakeOnce(magnitude * 2, magnitude * 4, 0.15f, 0.5f);
     }
 
-    public void TriggerAudio()
+    public void TriggerAudio(int index)
     {
-
+        _audioSource.PlayOneShot(_attackSoundEffects[index]);
     }
 }
