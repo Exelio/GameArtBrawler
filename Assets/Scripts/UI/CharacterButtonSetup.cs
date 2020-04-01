@@ -6,7 +6,7 @@ public class CharacterButtonSetup : MonoBehaviour
     [SerializeField] private ChangeStats _player1Stats, _player2Stats;
     [SerializeField] private GameObject[] _characterObjects;
     [SerializeField] private GameController _gameController;
-    [SerializeField] private ButtonBehaviour _characterButtonBehaviour;
+    [SerializeField] private ButtonBehaviour[] _characterButtonBehaviour;
     [SerializeField] private GetRefCharacter[] _playerRefs;
     [SerializeField] private GameObject _player1RefSpawnpoint;
     public GameObject Player1RefSpawnpoint => _player1RefSpawnpoint;
@@ -36,7 +36,7 @@ public class CharacterButtonSetup : MonoBehaviour
 
         for (int i = 1; i <= _characterAmount; i++)
         {
-            ButtonBehaviour beh = Instantiate(_characterButtonBehaviour, this.transform);
+            ButtonBehaviour beh = Instantiate(_characterButtonBehaviour[i-1], this.transform);
             beh.CharacterNumber = i;
             beh.CharacterSetup = this;
             beh.CharacterObject = _characterObjects[i - 1];
