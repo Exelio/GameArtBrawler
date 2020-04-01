@@ -60727,8 +60727,15 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 1.1666666
+  - time: 0
     functionName: ResetTriggers
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 1.1666666
+    functionName: SetTriggers
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
@@ -60756,7 +60763,7 @@ AnimationClip:
     intParameter: 0
     messageOptions: 0
   - time: 2.1666667
-    functionName: SetTriggers
+    functionName: ResetTriggers
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
