@@ -60,17 +60,17 @@ Material:
     - _Blend: 0
     - _BumpScale: 1
     - _CausticDistortion: 0.21
-    - _CausticScale: 0.36
-    - _CausticSpeed: 3.6
-    - _CausticVertexDistortion: 0.33
+    - _CausticScale: 0.24
+    - _CausticSpeed: 3
+    - _CausticVertexDistortion: 0.409
     - _Cull: 2
     - _Cutoff: 0.5
     - _DirectionX: 1
     - _DirectionY: 1
     - _DstBlend: 0
-    - _EdgeBlur: 0.63
-    - _EdgeStrength: 81
-    - _EdgeWidth: 0.99
+    - _EdgeBlur: 0.75
+    - _EdgeStrength: 30
+    - _EdgeWidth: 0.3
     - _EnvironmentReflections: 1
     - _GlossMapScale: 0
     - _Glossiness: 0
@@ -90,8 +90,8 @@ Material:
     - _SrcBlend: 1
     - _Surface: 0
     - _TintOffset: 1.5
-    - _TintStrength: 6
-    - _TopLayerBlur: 0.6
+    - _TintStrength: 2.4
+    - _TopLayerBlur: 0.419
     - _TopLayerCutoff: 1
     - _TopLayerStrength: 39
     - _WorkflowMode: 1

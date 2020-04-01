@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MAT_RockSlab
+  m_Name: MAT_Rock_04
   m_Shader: {fileID: -6465566751694194690, guid: 3ecfaa4af48f81c4088206985a6f8722,
     type: 3}
   m_ShaderKeywords: 
@@ -72,9 +72,12 @@ Material:
     m_Floats:
     - Vector1_27FC01CA: 0.693
     - Vector1_3CFD09B5: 0.362
+    - Vector1_5C566587: 0
     - Vector1_8386A876: -0.158
+    - Vector1_ABA7E011: -0.09
     - Vector1_BBA98306: 0.03
     - Vector1_C5F28BFB: 0.5
+    - Vector1_C7FB9F9: 0
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
@@ -98,10 +101,15 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - Color_BB4D3088: {r: 0.4528302, g: 0.3780705, b: 0.3780705, a: 1}
-    - Color_DEB3AA71: {r: 0.18867922, g: 0.15930934, b: 0.16888472, a: 1}
+    - Color_BB4D3088: {r: 0.16981131, g: 0.13735713, b: 0.13216446, a: 1}
+    - Color_DEB3AA71: {r: 0.26526186, g: 0.2552065, b: 0.3490566, a: 1}
+    - Vector2_61F0E788: {r: 0, g: 0, b: 0, a: 0}
+    - Vector2_8CCC3D3E: {r: 1, g: 1, b: 0, a: 0}
+    - Vector2_A0E9DD48: {r: 0.62, g: 1.08, b: 0, a: 0}
+    - Vector2_AA8B52EC: {r: 0, g: 0, b: 0, a: 0}
     - _BaseColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _MainColor: {r: 0.4056604, g: 0.37036008, b: 0.33486116, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
+    - _Tiling: {r: 1, g: 1, b: 0, a: 0}
