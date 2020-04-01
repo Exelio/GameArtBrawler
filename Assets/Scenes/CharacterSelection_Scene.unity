@@ -293,6 +293,56 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 8478884754563879984, guid: da0d4aab4e551d94e9339f2a8bc20401,
+        type: 3}
+      propertyPath: _characterObjects.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8478884754563879984, guid: da0d4aab4e551d94e9339f2a8bc20401,
+        type: 3}
+      propertyPath: _playerRefs.Array.data[0]
+      value: 
+      objectReference: {fileID: 334911285}
+    - target: {fileID: 8478884754563879984, guid: da0d4aab4e551d94e9339f2a8bc20401,
+        type: 3}
+      propertyPath: _playerRefs.Array.data[1]
+      value: 
+      objectReference: {fileID: 1369516934}
+    - target: {fileID: 8478884754563879984, guid: da0d4aab4e551d94e9339f2a8bc20401,
+        type: 3}
+      propertyPath: _characterObjects.Array.data[0]
+      value: 
+      objectReference: {fileID: 5240232032504446875, guid: 336bec2dc9155a44cb94e72ee4738b35,
+        type: 3}
+    - target: {fileID: 8478884754563879984, guid: da0d4aab4e551d94e9339f2a8bc20401,
+        type: 3}
+      propertyPath: _gameController
+      value: 
+      objectReference: {fileID: 1855804161}
+    - target: {fileID: 8478884754563879984, guid: da0d4aab4e551d94e9339f2a8bc20401,
+        type: 3}
+      propertyPath: _characterObjects.Array.data[1]
+      value: 
+      objectReference: {fileID: 7118485791694549886, guid: dba0734ec4813a64b955810a7387964e,
+        type: 3}
+    - target: {fileID: 8478884754563879984, guid: da0d4aab4e551d94e9339f2a8bc20401,
+        type: 3}
+      propertyPath: _characterObjects.Array.data[2]
+      value: 
+      objectReference: {fileID: 1552031142717544610, guid: d3aa8b736ab3a4140a1a5af60fa96249,
+        type: 3}
+    - target: {fileID: 8478884754563879984, guid: da0d4aab4e551d94e9339f2a8bc20401,
+        type: 3}
+      propertyPath: _characterObjects.Array.data[3]
+      value: 
+      objectReference: {fileID: 6794393237042327270, guid: 758fb167e1eec794da6ed8d87a529b9b,
+        type: 3}
+    - target: {fileID: 8478884754563879984, guid: da0d4aab4e551d94e9339f2a8bc20401,
+        type: 3}
+      propertyPath: _characterObjects.Array.data[4]
+      value: 
+      objectReference: {fileID: 4569701012236561118, guid: 132a40c64fd0ed646a96b147bf0911b1,
+        type: 3}
     - target: {fileID: 8648296630129270893, guid: da0d4aab4e551d94e9339f2a8bc20401,
         type: 3}
       propertyPath: m_AnchorMax.y
