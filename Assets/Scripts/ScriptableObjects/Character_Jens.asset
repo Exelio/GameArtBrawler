@@ -18,4 +18,4 @@ MonoBehaviour:
   _characterSpeed: 4.8
   _timeUntilNextBlock: 1.5
   _defence: 5
-  _weight: 1
+  _weight: 3
