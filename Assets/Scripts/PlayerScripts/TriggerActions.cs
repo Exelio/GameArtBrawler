@@ -65,6 +65,9 @@ public class TriggerActions : MonoBehaviour
     public void TriggerAudio(int index)
     {
         if (_audioSource != null)
+        {
+            _audioSource.volume = 0.1f;
             _audioSource.PlayOneShot(_attackSoundEffects[index]);
+        }
     }
 }

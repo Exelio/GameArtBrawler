@@ -172,7 +172,11 @@ public class PlayerBehaviour : MonoBehaviour
         CameraShaker.Instance.ShakeOnce(_characterStats.ActualDamageTaken / 7, (_characterStats.ActualDamageTaken / 7) * 2, 0.15f, 0.5f);
 
         if (_audioSource != null)
+        {
+            _audioSource.volume = 0.2f;
             _audioSource.PlayOneShot(_hitSoundEffect);
+        }
+            
     }
 
     private void InstantiateDamage()
