@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efbfe7ba0e45fc48b0388bab81f8483, type: 3}
   m_Name: Character_Dimi
   m_EditorClassIdentifier: 
-  _health: 390
-  _normalAttackDamage: 35
-  _heavyAttackDamage: 75
-  _characterSpeed: 4.2
-  _timeUntilNextBlock: 2.1
-  _defence: 30
-  _weight: 8
+  _health: 245
+  _normalAttackDamage: 26
+  _heavyAttackDamage: 65
+  _characterSpeed: 4.5
+  _timeUntilNextBlock: 3.5
+  _defence: 18
+  _weight: 5

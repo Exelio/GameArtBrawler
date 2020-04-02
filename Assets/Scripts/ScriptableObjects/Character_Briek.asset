@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efbfe7ba0e45fc48b0388bab81f8483, type: 3}
   m_Name: Character_Briek
   m_EditorClassIdentifier: 
-  _health: 250
-  _normalAttackDamage: 30
-  _heavyAttackDamage: 70
+  _health: 230
+  _normalAttackDamage: 29
+  _heavyAttackDamage: 75
   _characterSpeed: 4
   _timeUntilNextBlock: 2
-  _defence: 25
+  _defence: 20
   _weight: 4

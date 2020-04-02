@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efbfe7ba0e45fc48b0388bab81f8483, type: 3}
   m_Name: Character_Brik
   m_EditorClassIdentifier: 
-  _health: 250
-  _normalAttackDamage: 20
-  _heavyAttackDamage: 55
-  _characterSpeed: 4.2
+  _health: 235
+  _normalAttackDamage: 33
+  _heavyAttackDamage: 70
+  _characterSpeed: 4.5
   _timeUntilNextBlock: 1.5
-  _defence: 15
+  _defence: 16
   _weight: 3

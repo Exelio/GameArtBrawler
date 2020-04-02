@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Character_Jens
   m_EditorClassIdentifier: 
   _health: 210
-  _normalAttackDamage: 45
-  _heavyAttackDamage: 95
-  _characterSpeed: 4.8
+  _normalAttackDamage: 42.5
+  _heavyAttackDamage: 93
+  _characterSpeed: 5
   _timeUntilNextBlock: 1.5
-  _defence: 5
+  _defence: 8
   _weight: 3

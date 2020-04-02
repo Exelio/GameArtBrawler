@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efbfe7ba0e45fc48b0388bab81f8483, type: 3}
   m_Name: Character_Daan
   m_EditorClassIdentifier: 
-  _health: 300
-  _normalAttackDamage: 35
-  _heavyAttackDamage: 80
-  _characterSpeed: 3
-  _timeUntilNextBlock: 3
-  _defence: 45
-  _weight: 10
+  _health: 240
+  _normalAttackDamage: 15
+  _heavyAttackDamage: 71
+  _characterSpeed: 2.5
+  _timeUntilNextBlock: 4
+  _defence: 30
+  _weight: 5
