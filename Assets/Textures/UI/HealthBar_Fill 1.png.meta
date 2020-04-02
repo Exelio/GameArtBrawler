@@ -1,7 +1,28 @@
 fileFormatVersion: 2
 guid: 46cb43f4796e51c40b68e2b535966b42
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 2269715749121944189
+    second: HealthBar_Fill 1_0
+  - first:
+      213: -4142816904394908670
+    second: HealthBar_Fill 1_1
+  - first:
+      213: 423809670048425723
+    second: HealthBar_Fill 1_2
+  - first:
+      213: -6417281258745881404
+    second: HealthBar_Fill 1_3
+  - first:
+      213: 5149706151501260500
+    second: HealthBar_Fill 1_4
+  - first:
+      213: -3524204341441941059
+    second: HealthBar_Fill 1_5
+  - first:
+      213: -3703536320342988424
+    second: HealthBar_Fill 1_6
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -41,13 +62,13 @@ TextureImporter:
   lightmap: 0
   compressionQuality: 50
   spriteMode: 1
-  spriteExtrude: 1
+  spriteExtrude: 0
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
-  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 1
+  spriteBorder: {x: 12, y: 9, z: 12, w: 9}
+  spriteGenerateFallbackPhysicsShape: 0
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -96,7 +117,70 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: HealthBar_Fill 1_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 0
+        width: 18
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7ae587c276af7f10800000000000000
+      internalID: 2269715749121944189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthBar_Fill 1_1
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 0
+        width: 431
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20cde0c99f1c186c0800000000000000
+      internalID: -4142816904394908670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthBar_Fill 1_2
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 0
+        width: 18
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf6ac9346aca1e500800000000000000
+      internalID: 423809670048425723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

@@ -1755,7 +1755,7 @@ Transform:
   m_GameObject: {fileID: 5240232032504446875}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.25, y: 1.25, z: 1.25}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
   m_Children:
   - {fileID: 6745526767779710904}
   - {fileID: 8498230112213620096}
@@ -1803,6 +1803,7 @@ MonoBehaviour:
   _attackTriggers:
   - {fileID: 4746324795586592790}
   - {fileID: 1935296395675200369}
+  - {fileID: 4110596263580929508}
   _hitDetection:
   - {fileID: 7677863039067177846}
   - {fileID: 1832646892201824251}

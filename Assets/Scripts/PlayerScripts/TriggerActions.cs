@@ -64,6 +64,7 @@ public class TriggerActions : MonoBehaviour
 
     public void TriggerAudio(int index)
     {
-        _audioSource.PlayOneShot(_attackSoundEffects[index]);
+        if (_audioSource != null)
+            _audioSource.PlayOneShot(_attackSoundEffects[index]);
     }
 }

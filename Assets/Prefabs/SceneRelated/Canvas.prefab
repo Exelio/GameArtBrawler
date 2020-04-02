@@ -1501,9 +1501,9 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 143221980902183775}
   - {fileID: 8478884754453375205}
   - {fileID: 8967682801100874645}
-  - {fileID: 143221980902183775}
   m_Father: {fileID: 8478884754331589407}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1627,7 +1627,7 @@ RectTransform:
   - {fileID: 4407475299699303211}
   - {fileID: 4180490657430418387}
   m_Father: {fileID: 4784624161436402468}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2940,7 +2940,7 @@ RectTransform:
   m_LocalScale: {x: 167.85, y: 167.85, z: 167.85}
   m_Children: []
   m_Father: {fileID: 4784624161436402468}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -3500,8 +3500,8 @@ RectTransform:
   m_LocalScale: {x: 0.0852572, y: 0.0852572, z: 0.0852572}
   m_Children:
   - {fileID: 8478884754331589407}
-  - {fileID: 8478884754717321724}
   - {fileID: 8478884754090533133}
+  - {fileID: 8478884754717321724}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3823,7 +3823,7 @@ RectTransform:
   m_Children:
   - {fileID: 8478884754835700558}
   m_Father: {fileID: 8478884753273342161}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4202,7 +4202,7 @@ RectTransform:
   - {fileID: 3798938224427787576}
   - {fileID: 3472276934677530450}
   m_Father: {fileID: 4784624161436402468}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4364,8 +4364,10 @@ MonoBehaviour:
   - {fileID: 2546252851075571783, guid: 33602b40d8d663247bc912556609b06a, type: 3}
   - {fileID: 2546252851075571783, guid: 33602b40d8d663247bc912556609b06a, type: 3}
   _gameController: {fileID: 0}
-  _characterButtonBehaviour: {fileID: 2811809653332679476, guid: 05f71abf12974b24f91f56d0b8df01b7,
-    type: 3}
+  _characterButtonBehaviour:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   _playerRefs:
   - {fileID: 0}
   - {fileID: 0}
@@ -4547,7 +4549,7 @@ RectTransform:
   m_Children:
   - {fileID: 8478884754948492455}
   m_Father: {fileID: 8478884753273342161}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}

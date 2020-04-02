@@ -26,13 +26,11 @@ public class GameController : MonoBehaviour
     private static AudioClip[] ARENASOUNDTRACKS;
     [SerializeField] private AudioClip[] _arenaSoundTracks;
 
-    private void Awake()
+    private void Start()
     {
         CheckDontDestroyOnLoad();
 
         Setup();
-
-        _audioSource = GetComponent<AudioSource>();
 
         ARENASOUNDTRACKS = _arenaSoundTracks;
         CHARSELECTSCREENSOUNDTRACK = _charSelectScreenSoundtrack;
@@ -48,11 +46,13 @@ public class GameController : MonoBehaviour
     private void CheckDontDestroyOnLoad()
     {
         GameObject[] gos = GameObject.FindGameObjectsWithTag("GameController");
+
         if (gos.Length > 1)
-        {
-            Destroy(this.gameObject);
-        }
-        DontDestroyOnLoad(this.gameObject);
+            Destroy(gos[1]);
+        else
+            _audioSource = GetComponent<AudioSource>();
+
+        DontDestroyOnLoad(gameObject);
     }
 
     private void Setup()
@@ -60,9 +60,7 @@ public class GameController : MonoBehaviour
         _playerCharacter = new Dictionary<int, GameObject>();
 
         for (int i = 1; i <= _playerAmount; i++)
-        {
             _playerCharacter.Add(i, null);
-        }
     }     
     
     public static void ChangeGameState(bool gamePlaying)
@@ -75,10 +73,10 @@ public class GameController : MonoBehaviour
     public static IEnumerator GoToCharacterSelectScreen()
     {
         yield return new WaitForSeconds(3f);
-        _audioSource.clip = CHARSELECTSCREENSOUNDTRACK;
+        //_audioSource.clip = CHARSELECTSCREENSOUNDTRACK;
 
-        _audioSource.Play();
-        _audioSource.loop = true;
+        //_audioSource.Play();
+        //_audioSource.loop = true;
         SceneManager.LoadScene("CharacterSelection_Scene");
     }
 
